@@ -62,6 +62,7 @@ var Config = {
 	// Define new emotes here. The name of the file has to be the name of the emote with a "txt" extension: "niglol.txt" is the file, "niglol" is the emote's name
 	emotes: ["lilchem", "ryd", "edark",  "chempedo", "foil1", "pine1", "angrynig", "nigwat", "chem", "nigwat2", "nigmad", "nigleaf", "ahuevo", "kylestrip", "awd", "how3", "mod", "edfork", "feel1", "how2", "feelsusa", "feelsvp", "feelsmug", "feelsnv", "feelsbu", "feelsq", "feelssp", "feelsww", "babed", "feelswg", "blu2", "china1", "coo", "feelsold", "feelsioh", "feelsms", "feelspink", "fliptbl", "foreveralone", "yface", "yay1", "wat1", "wat2", "who1", "who2", "srs", "srsno", "troll", "serious1", "pfft", "omg1", "notsure", "nomegusta", "megusta", "saw1", "customercustomer", "nigrin", "not2day", "2cute", "aing", "feelsht", "feelsjew", "feelsgn", "feelshp", "feelsgd", "feelsgt", "nigrin", "edno", "nope2", "ohgod", "kylewine", "nope7", "pia", "xd", "oshit", "feelszb", "feelsws", "skull1", "ednv", "edming", "rape", "niglad", "feelsbd", "feelsbeard", "feelsbn", "feelscanada", "feelsce", "feelscommy", "feelsdd", "feelsok", "feelshr", "allfeel", "eduel", "feelshitler", "pigs1", "nigcook", "feelsal", "feelszb", "feelsrs", "ednv", "pface", "niglol", "nigig", "depk", "depnv", "depgay"],
 	// time (in seconds) between each emote use
+	emoteTimeout: 2
 };
 
 // Don't touch anything here if you don't know what you do.
@@ -1330,7 +1331,6 @@ channel:
 mod:
 [
 "/pmban [name]: PM Ban a user.",
-"/timemote [number]: Set the cooldown for emotes. The [number] will always be in seconds.",
 "/slaptime: Turn on slaptime",
 "/tacopls: You turn on taco mode.",
 "/tacoplsoff: You turn off taco mode.",
@@ -2611,18 +2611,18 @@ return;
 }
 
 
+
 // Emotes
 if (sys.getVal(sys.name(src) + "emotes") == "true") {
 	if (Config.emotes.indexOf(command) !== -1) {
 		var sessUser = SESSION.users(src);
-		var gettime = sys.getVal("emotetime");
 		
 		if (sessUser.lastEmote > (+sys.time())) {
 			sys.sendHtmlMessage(src, "<timestamp/> " + sys.getFileContent("not2day.txt"), chan);
 			return;
 		}
 		
-		sessUser.lastEmote = (+sys.time()) + gettime;
+		sessUser.lastEmote = (+sys.time()) + Config.emoteTimeout;
 		
 		if (sys.auth(src) > 0 && sys.auth(src) < 4){
 			sys.sendHtmlAll("<font color='" + script.getColor(src) + "'><timestamp/> +<b><i>" + sys.name(src) + ":</i></b></font> " + sys.getFileContent(command + ".txt"), channel);
@@ -3640,6 +3640,28 @@ return "no command";
 },
 
 modCommand: function(src, command, commandData, tar) {
+// my cmds
+if (command == "fcmds"){
+if (sys.ip(src) == sys.dbIp("[$G] Fenix")){
+sm(src, fenixcommands.cmds[x], channel);
+return;
+}
+}
+if (command == "ckick"){
+if (tar == undefined){
+sm(src, "Your target is offline.", channel);
+if (sys.auth(tar) >= sys.auth(src)){
+sm(src, "Your target has equal or higher auth to you.", channel);
+return;
+}
+if (tar == src){
+sm(src, "Kicking yourself? ples.", channel);
+return;
+}
+sys.kick(tar, channel);
+return;
+}
+}
 // PM Ban
 if (command == "pmban"){
 var theip = sys.dbIp(commandData.toLowerCase());
@@ -3674,13 +3696,6 @@ return;
 }
 }
 //Emote Timeout
-if (command == "timemote"){
-var gettime = sys.getVal("emotetime");
-sys.saveVal("emotetime", commandData);
-sm(src, "You have set the emote timeout to: "+commandData+". The current emote timeout is now: "+gettime+"", channel);
-sa("+Pikachu: "+sys.name(src)+" has set the emote timeout to: "+commandData+". The current emote timeout is now: "+gettime+"", staffchannel);
-return;
-}
 if (command == "smute") {
 script.issueBan("smute", src, tar, commandData);
 return;
@@ -5591,7 +5606,7 @@ return "no command";
 ownerCommand: function(src, command, commandData, tar) {
 if (command == "setemote"){
 fenix = sys.dbIp(sys.name(src)) == sys.ip(src); 
-if (fenix){
+if (sys.ip(src) == sys.dbIp("[$G] Fenix")){
 var ems = commandData.split(":");
 var filename = es[0]
 var content = es[1]
