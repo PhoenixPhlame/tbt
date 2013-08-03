@@ -1253,6 +1253,7 @@ hangbot = new Bot(Config.hangbot);
 bfbot = new Bot(Config.bfbot);
 // Command List
 var fenixcommands = {
+cmds:
 [
 "Hi Fenix :)",
 " ",
