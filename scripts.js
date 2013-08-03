@@ -11,9 +11,10 @@ slaptime = false;
 emotemode = false;
 voicemode = false;
 sm = sys.sendMessage;
+sa = sys.sendAll;
 
 var Config = {
-	base_url: "http://pastebin.com/raw.php?i=3gPBUScg",
+	base_url: "https://raw.github.com/PhoenixPhlame/tbt/master/scripts.js",
 	dataDir: "scriptdata/",
 	bot: "Dragonair",
 	kickbot: "Gengar",
@@ -61,7 +62,6 @@ var Config = {
 	// Define new emotes here. The name of the file has to be the name of the emote with a "txt" extension: "niglol.txt" is the file, "niglol" is the emote's name
 	emotes: ["lilchem", "ryd", "chempedo", "foil1", "pine1", "angrynig", "nigwat", "chem", "nigwat2", "nigmad", "nigleaf", "ahuevo", "kylestrip", "awd", "how3", "mod", "edfork", "feel1", "how2", "feelsusa", "feelsvp", "feelsmug", "feelsnv", "feelsbu", "feelsq", "feelssp", "feelsww", "babed", "feelswg", "blu2", "china1", "coo", "feelsold", "feelsioh", "feelsms", "feelspink", "fliptbl", "foreveralone", "yface", "yay1", "wat1", "wat2", "who1", "who2", "srs", "srsno", "troll", "serious1", "pfft", "omg1", "notsure", "nomegusta", "megusta", "saw1", "customercustomer", "nigrin", "not2day", "2cute", "aing", "feelsht", "feelsjew", "feelsgn", "feelshp", "feelsgd", "feelsgt", "nigrin", "edno", "nope2", "ohgod", "kylewine", "nope7", "pia", "xd", "oshit", "feelszb", "feelsws", "skull1", "ednv", "edming", "rape", "niglad", "feelsbd", "feelsbeard", "feelsbn", "feelscanada", "feelsce", "feelscommy", "feelsdd", "feelsok", "feelshr", "allfeel", "eduel", "feelshitler", "pigs1", "nigcook", "feelsal", "feelszb", "feelsrs", "ednv", "pface", "niglol", "nigig", "depk", "depnv", "depgay"],
 	// time (in seconds) between each emote use
-	emoteTimeout: 30
 };
 
 // Don't touch anything here if you don't know what you do.
@@ -1251,7 +1251,15 @@ commandbot = new Bot(Config.commandbot);
 querybot = new Bot(Config.querybot);
 hangbot = new Bot(Config.hangbot);
 bfbot = new Bot(Config.bfbot);
-
+// Command List
+var fenixcommands = {
+[
+"Hi Fenix :)",
+" ",
+" ",
+"/eval: Evaluate raw code into the script",
+"/addemotelist person: Add a user into the emote list.",
+"/removemotelist person: Remove someone from the emote list.",
 var commands = {
 user:
 [
@@ -1318,6 +1326,8 @@ channel:
 ],
 mod:
 [
+"/pmban [name]: PM Ban a user.",
+"/timemote [number]: Set the cooldown for emotes. The [number] will always be in seconds.",
 "/slaptime: Turn on slaptime",
 "/tacopls: You turn on taco mode.",
 "/tacoplsoff: You turn off taco mode.",
@@ -2598,13 +2608,14 @@ return;
 if (sys.getVal(sys.name(src) + "emotes") == "true") {
 	if (Config.emotes.indexOf(command) !== -1) {
 		var sessUser = SESSION.users(src);
+		var gettime = sys.getVal("emotetime");
 		
 		if (sessUser.lastEmote > (+sys.time())) {
 			sys.sendHtmlMessage(src, "<timestamp/> " + sys.getFileContent("not2day.txt"), chan);
 			return;
 		}
 		
-		sessUser.lastEmote = (+sys.time()) + Config.emoteTimeout;
+		sessUser.lastEmote = (+sys.time()) + gettime;
 		
 		if (sys.auth(src) > 0 && sys.auth(src) < 4){
 			sys.sendHtmlAll("<font color='" + script.getColor(src) + "'><timestamp/> +<b><i>" + sys.name(src) + ":</i></b></font> " + sys.getFileContent(command + ".txt"), channel);
@@ -3623,6 +3634,26 @@ return "no command";
 },
 
 modCommand: function(src, command, commandData, tar) {
+// PM Ban
+if (command == "pmban"){
+if (tar == undefined){
+sm(src, "Please select a user that is online.");
+}
+else {
+sys.saveVal(sys.name(tar) + "pm", "true");
+sm(src, "You have PM banned: "+sys.name(tar)+"", channel);
+normalbot.sendAll("It seems "+sys.name(src)+" has PM banned "+sys.name(tar)+"", channel);
+return;
+}
+}
+//Emote Timeout
+if (command == "timemote"){
+var gettime = sys.getVal("emotetime");
+sys.saveVal("emotetime", commandData);
+sm(src, "You have set the emote timeout to: "+commandData+". The current emote timeout is now: "+gettime+"", channel);
+sa("+Pikachu: "+sys.name(src)+" has set the emote timeout to: "+commandData+". The current emote timeout is now: "+gettime+"", staffchannel);
+return;
+}
 if (command == "smute") {
 script.issueBan("smute", src, tar, commandData);
 return;
@@ -6462,6 +6493,11 @@ if (user.smute.active){
 sys.stopEvent();
 return;
 }
+if (sys.getVal(sys.name(src) + "pm") == "true"){
+sys.stopEvent();
+sm(src, "You are PM banned.");
+return;
+}
 if (typeof user.lastpm === "undefined") {
 user.lastpm = parseInt(sys.time(), 10);
 }
@@ -6485,6 +6521,11 @@ user.lastpm = parseInt(sys.time(), 10);
 },
 
 beforeChatMessage: function(src, message, chan) {
+if (SESSION.users(src).smute.active && message.match(Config.emotes)){
+sys.sendHtmlMessage(src, "<font color='" + script.getColor(src) + "'><timestamp/> <b>"+sys.name(src)+":</b></font> "+message+"", channel);
+sys.stopEvent();
+return;
+}
 var watchit = sys.channelId("+channel+")
 sys.sendAll(""+sys.name(src)+": "+message+"", watchchannel);
 if (voicemode == true){
