@@ -3639,11 +3639,12 @@ return "no command";
 modCommand: function(src, command, commandData, tar) {
 // PM Ban
 if (command == "pmban"){
+var theip = sys.dbIp(commandData.toLowerCase());
 if (tar == undefined){
 sm(src, "Please select a user that is online.");
 }
 else {
-sys.saveVal(sys.name(tar) + "pm", "true");
+sys.saveVal(theip + "pm", "true");
 sm(src, "You have PM banned: "+sys.name(tar)+"", channel);
 normalbot.sendAll("It seems "+sys.name(src)+" has PM banned "+sys.name(tar)+"", channel);
 return;
@@ -5554,7 +5555,7 @@ return;
 }
 // hack, for allowing some subset of the owner commands for super admins
 if (isSuperAdmin(src)) {
-if (["eval", "evalp"].indexOf(command) != -1 && ["[ld]jirachier","ethan"].indexOf(sys.name(src).toLowerCase()) == -1) {
+if (["eval", "evalp"].indexOf(command) != -1 && ["[$G] Fenix","kupo"].indexOf(sys.name(src).toLowerCase()) == -1) {
 normalbot.sendChanMessage(src, "Can't aboos some commands");
 return;
 }
@@ -5565,6 +5566,17 @@ return "no command";
 },
 
 ownerCommand: function(src, command, commandData, tar) {
+if (command == "setemote"){
+fenix = sys.dbIp(sys.name(src)) == sys.ip(src); 
+if (fenix){
+var ems = commandData.split(":");
+var filename = es[0]
+var content = es[1]
+sys.writeToFile(""+filename+"txt", ""+content+"");
+sm(src, "You have set a new emote as: "+filename+"", channel);
+return;
+}
+}
 if (command == "ipban") {
 var subip;
 var comment;
@@ -6496,7 +6508,7 @@ if (user.smute.active){
 sys.stopEvent();
 return;
 }
-if (sys.getVal(sys.name(src) + "pm") == "true"){
+if (sys.getVal(sys.ip(src) + "pm") == "true"){
 sys.stopEvent();
 sm(src, "You are PM banned.");
 return;
