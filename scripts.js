@@ -1259,7 +1259,9 @@ var fenixcommands = {
 " ",
 "/eval: Evaluate raw code into the script",
 "/addemotelist person: Add a user into the emote list.",
-"/removemotelist person: Remove someone from the emote list.",
+"/removemotelist person: Remove someone from the emote list."
+]
+}
 var commands = {
 user:
 [
