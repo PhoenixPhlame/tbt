@@ -62,7 +62,7 @@ var Config = {
 	// Define new emotes here. The name of the file has to be the name of the emote with a "txt" extension: "niglol.txt" is the file, "niglol" is the emote's name
 	emotes: ["lilchem", "ryd", "edark",  "chempedo", "foil1", "pine1", "angrynig", "nigwat", "chem", "nigwat2", "nigmad", "nigleaf", "ahuevo", "kylestrip", "awd", "how3", "mod", "edfork", "feel1", "how2", "feelsusa", "feelsvp", "feelsmug", "feelsnv", "feelsbu", "feelsq", "feelssp", "feelsww", "babed", "feelswg", "blu2", "china1", "coo", "feelsold", "feelsioh", "feelsms", "feelspink", "fliptbl", "foreveralone", "yface", "yay1", "wat1", "wat2", "who1", "who2", "srs", "srsno", "troll", "serious1", "pfft", "omg1", "notsure", "nomegusta", "megusta", "saw1", "customercustomer", "nigrin", "not2day", "2cute", "aing", "feelsht", "feelsjew", "feelsgn", "feelshp", "feelsgd", "feelsgt", "nigrin", "edno", "nope2", "ohgod", "kylewine", "nope7", "pia", "xd", "oshit", "feelszb", "feelsws", "skull1", "ednv", "edming", "rape", "niglad", "feelsbd", "feelsbeard", "feelsbn", "feelscanada", "feelsce", "feelscommy", "feelsdd", "feelsok", "feelshr", "allfeel", "eduel", "feelshitler", "pigs1", "nigcook", "feelsal", "feelszb", "feelsrs", "ednv", "pface", "niglol", "nigig", "depk", "depnv", "depgay"],
 	// time (in seconds) between each emote use
-	emoteTimeout: 2
+	emoteTimeout: 20
 };
 
 // Don't touch anything here if you don't know what you do.
@@ -2617,12 +2617,6 @@ if (sys.getVal(sys.name(src) + "emotes") == "true") {
 	if (Config.emotes.indexOf(command) !== -1) {
 		var sessUser = SESSION.users(src);
 		
-		if (sessUser.lastEmote > (+sys.time())) {
-			sys.sendHtmlMessage(src, "<timestamp/> " + sys.getFileContent("not2day.txt"), chan);
-			return;
-		}
-		
-		sessUser.lastEmote = (+sys.time()) + Config.emoteTimeout;
 		
 		if (sys.auth(src) > 0 && sys.auth(src) < 4){
 			sys.sendHtmlAll("<font color='" + script.getColor(src) + "'><timestamp/> +<b><i>" + sys.name(src) + ":</i></b></font> " + sys.getFileContent(command + ".txt"), channel);
