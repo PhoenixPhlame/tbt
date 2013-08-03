@@ -60,7 +60,7 @@ var Config = {
 	disallowStaffChannel: [],
 	
 	// Define new emotes here. The name of the file has to be the name of the emote with a "txt" extension: "niglol.txt" is the file, "niglol" is the emote's name
-	emotes: ["lilchem", "ryd", "chempedo", "foil1", "pine1", "angrynig", "nigwat", "chem", "nigwat2", "nigmad", "nigleaf", "ahuevo", "kylestrip", "awd", "how3", "mod", "edfork", "feel1", "how2", "feelsusa", "feelsvp", "feelsmug", "feelsnv", "feelsbu", "feelsq", "feelssp", "feelsww", "babed", "feelswg", "blu2", "china1", "coo", "feelsold", "feelsioh", "feelsms", "feelspink", "fliptbl", "foreveralone", "yface", "yay1", "wat1", "wat2", "who1", "who2", "srs", "srsno", "troll", "serious1", "pfft", "omg1", "notsure", "nomegusta", "megusta", "saw1", "customercustomer", "nigrin", "not2day", "2cute", "aing", "feelsht", "feelsjew", "feelsgn", "feelshp", "feelsgd", "feelsgt", "nigrin", "edno", "nope2", "ohgod", "kylewine", "nope7", "pia", "xd", "oshit", "feelszb", "feelsws", "skull1", "ednv", "edming", "rape", "niglad", "feelsbd", "feelsbeard", "feelsbn", "feelscanada", "feelsce", "feelscommy", "feelsdd", "feelsok", "feelshr", "allfeel", "eduel", "feelshitler", "pigs1", "nigcook", "feelsal", "feelszb", "feelsrs", "ednv", "pface", "niglol", "nigig", "depk", "depnv", "depgay"],
+	emotes: ["lilchem", "ryd", "edark",  "chempedo", "foil1", "pine1", "angrynig", "nigwat", "chem", "nigwat2", "nigmad", "nigleaf", "ahuevo", "kylestrip", "awd", "how3", "mod", "edfork", "feel1", "how2", "feelsusa", "feelsvp", "feelsmug", "feelsnv", "feelsbu", "feelsq", "feelssp", "feelsww", "babed", "feelswg", "blu2", "china1", "coo", "feelsold", "feelsioh", "feelsms", "feelspink", "fliptbl", "foreveralone", "yface", "yay1", "wat1", "wat2", "who1", "who2", "srs", "srsno", "troll", "serious1", "pfft", "omg1", "notsure", "nomegusta", "megusta", "saw1", "customercustomer", "nigrin", "not2day", "2cute", "aing", "feelsht", "feelsjew", "feelsgn", "feelshp", "feelsgd", "feelsgt", "nigrin", "edno", "nope2", "ohgod", "kylewine", "nope7", "pia", "xd", "oshit", "feelszb", "feelsws", "skull1", "ednv", "edming", "rape", "niglad", "feelsbd", "feelsbeard", "feelsbn", "feelscanada", "feelsce", "feelscommy", "feelsdd", "feelsok", "feelshr", "allfeel", "eduel", "feelshitler", "pigs1", "nigcook", "feelsal", "feelszb", "feelsrs", "ednv", "pface", "niglol", "nigig", "depk", "depnv", "depgay"],
 	// time (in seconds) between each emote use
 };
 
@@ -2217,6 +2217,18 @@ sys.putInChannel(src, staffchannel);
 sys.sendMessage(src, "Autoplaced in Indigo Plateau (Staff Channel)");
 return;
 }
+if (sys.auth(src) >= 0){
+sys.sendHtmlMessage(src, "<font color=purple><timestamp/> <b><i>!Pokemon Of The Week:</b></i></font> "+sys.getFileContent("currentevent.txt")+"");
+sys.sendHtmlMessage(src, "");
+sys.sendHtmlMessage(src, "<font color='blue'><timestamp/> <b><i>+[News]:</b></i></font> "+sys.getFileContent("currentevent2.txt")+"");
+sys.sendHtmlMessage(src, "");
+sys.sendHtmlMessage(src, "<font color='blue'><timestamp/> <b><i>+[More News]:</b></i></font> "+sys.getFileContent("currentevent3.txt")+"");
+sys.sendHtmlMessage(src, "");
+sys.sendHtmlMessage(src, "<font color='blue'><timestamp/> <b><i>+[Even MORE News]:</b></i></font> "+sys.getFileContent("currentevent4.txt")+"");
+sys.sendHtmlMessage(src, "");
+sys.sendHtmlMessage(src, "<font color='orange'><timestamp/> <b><i>+[Server Mood]:</b></i></font> "+sys.getFileContent("mtd.txt")+"");
+return;
+}
 if (sys.getVal(sys.name(src) + "fishn") == undefined){
 sys.saveVal(sys.name(src) + "fishn", 0);
 return;
@@ -2250,15 +2262,6 @@ countbot.sendMessage(src, "Max number of players online was " + sys.getVal("MaxP
 if (typeof(this.startUpTime()) == "string")
 countbot.sendMessage(src, "Server uptime is "+this.startUpTime());
 sys.sendMessage(src, "");
-sys.sendHtmlMessage(src, "<font color=purple><timestamp/> <b><i>!Pokemon Of The Week:</b></i></font> "+sys.getFileContent("currentevent.txt")+"");
-sys.sendHtmlMessage(src, "");
-sys.sendHtmlMessage(src, "<font color='blue'><timestamp/> <b><i>+[News]:</b></i></font> "+sys.getFileContent("currentevent2.txt")+"");
-sys.sendHtmlMessage(src, "");
-sys.sendHtmlMessage(src, "<font color='blue'><timestamp/> <b><i>+[More News]:</b></i></font> "+sys.getFileContent("currentevent3.txt")+"");
-sys.sendHtmlMessage(src, "");
-sys.sendHtmlMessage(src, "<font color='blue'><timestamp/> <b><i>+[Even MORE News]:</b></i></font> "+sys.getFileContent("currentevent4.txt")+"");
-sys.sendHtmlMessage(src, "");
-sys.sendHtmlMessage(src, "<font color='orange'><timestamp/> <b><i>+[Server Mood]:</b></i></font> "+sys.getFileContent("mtd.txt")+"");
 sys.sendMessage(src, "");
 sys.sendMessage(src, "");
 sys.sendMessage(src, "");
@@ -2607,6 +2610,7 @@ return;
 }
 }
 
+
 // Emotes
 if (sys.getVal(sys.name(src) + "emotes") == "true") {
 	if (Config.emotes.indexOf(command) !== -1) {
@@ -2629,7 +2633,6 @@ if (sys.getVal(sys.name(src) + "emotes") == "true") {
 		}
 	}
 }
-
 if (command == "nl"){
 if (sys.getVal(sys.ip(tar) + "nl") == "true"){
 sm(src, "This person is already name locked.", channel);
@@ -3643,10 +3646,30 @@ var theip = sys.dbIp(commandData.toLowerCase());
 if (tar == undefined){
 sm(src, "Please select a user that is online.");
 }
+if (sys.getVal(theip + "pm") == "true"){
+sm(src, "This person is already PM banned.", channel);
+return;
+}
 else {
 sys.saveVal(theip + "pm", "true");
 sm(src, "You have PM banned: "+sys.name(tar)+"", channel);
 normalbot.sendAll("It seems "+sys.name(src)+" has PM banned "+sys.name(tar)+"", channel);
+return;
+}
+}
+if (command == "unpmban"){
+var theip = sys.dbIp(commandData.toLowerCase());
+if (tar == undefined){
+sm(src, "Please select a user that is online.");
+}
+if (sys.getVal(theip + "pm") == "false"){
+sm(src, "This person isn't even PM banned.", channel);
+return;
+}
+else {
+sys.saveVal(theip + "pm", "false");
+sm(src, "You have PM banned: "+sys.name(tar)+"", channel);
+normalbot.sendAll("It seems "+sys.name(src)+" has Un-PM banned "+sys.name(tar)+"", channel);
 return;
 }
 }
