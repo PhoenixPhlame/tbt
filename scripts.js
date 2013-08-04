@@ -10,59 +10,53 @@ cmd_sangwich = false;
 slaptime = false;
 emotemode = false;
 voicemode = false;
-sm = sys.sendMessage;
-sa = sys.sendAll;
-
+sm = sys.sendMessage
 var Config = {
-	base_url: "https://raw.github.com/PhoenixPhlame/tbt/master/scripts.js",
-	dataDir: "scriptdata/",
-	bot: "Dragonair",
-	kickbot: "Gengar",
-	capsbot: "Scrafty",
-	channelbot: "Mawile",
-	checkbot: "Snorlax",
-	coinbot: "Meowth",
-	countbot: "CountBot",
-	tourneybot: "Emolga",
-	rankingbot: "Agumon",
-	battlebot: "Arcanine",
-	commandbot: "CommandBot",
-	querybot: "QueryBot",
-	hangbot: "Unown",
-	bfbot: "Deoxys",
-	musymbol: "~",
-	// suspectvoting.js available, but not in use
-	Plugins: ["mafia.js", "amoebagame.js", "tournaments.js", "tourstats.js", "trivia.js", "tours.js", "newtourstats.js", "auto_smute.js", "battlefactory.js", "hangman.js"],
-	Mafia: {
-		bot: "Murkrow",
-		norepeat: 11,
-		stats_file: "mafia_stats.json",
-		max_name_length: 16,
-		notPlayingMsg: "Â±Game: The game is in progress. Please type /join to join the next mafia game."
-	},
-	League: [
-		["[o-o]Max", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8966999/1/'>Gym Leader Thread</a>"],
-		["Black Mage", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/9003875/'>Gym Leader Thread</a>"],
-		["[$G]Knight", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/9007094/'>Gym Leader Thread</a>"],
-		["Supergrass", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8968789/1/'>Gym Leader Thread</a>"],
-		["DatPineapple", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8967403/1/'>Gym Leader Thread</a>"],
-		["[o-o]Glaecix", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/9003266/'>Gym Leader Thread</a>"],
-		["Asian", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8967046/1/'>Gym Leader Thread</a>"],
-		["Rudestyle", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8967105/1/'>Gym Leader Thread</a>"],
-		["[HH]M.A.K.O", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8969369/1/'>E4 Thread</a>"],
-		["titan", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8968009/1/'>E4 Leader Thread</a>"],
-		["[$g]big ed", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8967132/1/'>E4 Leader Thread</a>"],
-		["-Emvee-", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8967132/1/'>E4 Leader Thread</a>"]
-	],
-	DreamWorldTiers: ["No Preview OU", "No Preview Ubers", "DW LC", "Monotype", "DW UU", "DW LU", "Gen 5 1v1 Ubers", "Gen 5 1v1", "Challenge Cup", "CC 1v1", "DW Uber Triples", "No Preview OU Triples", "No Preview Uber Doubles", "No Preview OU Doubles", "Shanai Cup", "Shanai Cup 1.5", "Shanai Cup STAT", "Original Shanai Cup TEST", "Monocolour", "Clear Skies DW"],
-	superAdmins: [],
-	canJoinStaffChannel: [],
-	disallowStaffChannel: [],
-	
-	// Define new emotes here. The name of the file has to be the name of the emote with a "txt" extension: "niglol.txt" is the file, "niglol" is the emote's name
-	emotes: ["lilchem", "ryd", "edark",  "chempedo", "foil1", "pine1", "angrynig", "nigwat", "chem", "nigwat2", "nigmad", "nigleaf", "ahuevo", "kylestrip", "awd", "how3", "mod", "edfork", "feel1", "how2", "feelsusa", "feelsvp", "feelsmug", "feelsnv", "feelsbu", "feelsq", "feelssp", "feelsww", "babed", "feelswg", "blu2", "china1", "coo", "feelsold", "feelsioh", "feelsms", "feelspink", "fliptbl", "foreveralone", "yface", "yay1", "wat1", "wat2", "who1", "who2", "srs", "srsno", "troll", "serious1", "pfft", "omg1", "notsure", "nomegusta", "megusta", "saw1", "customercustomer", "nigrin", "not2day", "2cute", "aing", "feelsht", "feelsjew", "feelsgn", "feelshp", "feelsgd", "feelsgt", "nigrin", "edno", "nope2", "ohgod", "kylewine", "nope7", "pia", "xd", "oshit", "feelszb", "feelsws", "skull1", "ednv", "edming", "rape", "niglad", "feelsbd", "feelsbeard", "feelsbn", "feelscanada", "feelsce", "feelscommy", "feelsdd", "feelsok", "feelshr", "allfeel", "eduel", "feelshitler", "pigs1", "nigcook", "feelsal", "feelszb", "feelsrs", "ednv", "pface", "niglol", "nigig", "depk", "depnv", "depgay"],
-	// time (in seconds) between each emote use
-	emoteTimeout: 20
+base_url: "http://pastebin.com/raw.php?i=3gPBUScg",
+dataDir: "scriptdata/",
+bot: "Dragonair",
+kickbot: "Gengar",
+capsbot: "Scrafty",
+channelbot: "Mawile",
+checkbot: "Snorlax",
+coinbot: "Meowth",
+countbot: "CountBot",
+tourneybot: "Emolga",
+rankingbot: "Agumon",
+battlebot: "Arcanine",
+commandbot: "CommandBot",
+querybot: "QueryBot",
+hangbot: "Unown",
+bfbot: "Deoxys",
+musymbol: "~",
+// suspectvoting.js available, but not in use
+Plugins: ["mafia.js", "amoebagame.js", "tournaments.js", "tourstats.js", "trivia.js", "tours.js", "newtourstats.js", "auto_smute.js", "battlefactory.js", "hangman.js"],
+Mafia: {
+bot: "Murkrow",
+norepeat: 11,
+stats_file: "mafia_stats.json",
+max_name_length: 16,
+notPlayingMsg: "Â±Game: The game is in progress. Please type /join to join the next mafia game."
+},
+League: [
+["[o-o]Max", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8966999/1/'>Gym Leader Thread</a>"],
+["Black Mage", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/9003875/'>Gym Leader Thread</a>"],
+["[$G]Knight", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/9007094/'>Gym Leader Thread</a>"],
+["Supergrass", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8968789/1/'>Gym Leader Thread</a>"],
+["DatPineapple", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8967403/1/'>Gym Leader Thread</a>"],
+["[o-o]Glaecix", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/9003266/'>Gym Leader Thread</a>"],
+["Asian", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8967046/1/'>Gym Leader Thread</a>"],
+["Rudestyle", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8967105/1/'>Gym Leader Thread</a>"],
+["[HH]M.A.K.O", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8969369/1/'>E4 Thread</a>"],
+["titan", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8968009/1/'>E4 Leader Thread</a>"],
+["[$g]big ed", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8967132/1/'>E4 Leader Thread</a>"],
+["-Emvee-", "<a href='http://w11.zetaboards.com/TBT_Forums/topic/8967132/1/'>E4 Leader Thread</a>"]
+
+],
+DreamWorldTiers: ["No Preview OU", "No Preview Ubers", "DW LC", "Monotype", "DW UU", "DW LU", "Gen 5 1v1 Ubers", "Gen 5 1v1", "Challenge Cup", "CC 1v1", "DW Uber Triples", "No Preview OU Triples", "No Preview Uber Doubles", "No Preview OU Doubles", "Shanai Cup", "Shanai Cup 1.5", "Shanai Cup STAT", "Original Shanai Cup TEST", "Monocolour", "Clear Skies DW"],
+superAdmins: ["", ""],
+canJoinStaffChannel: ["", "", "", ""],
+disallowStaffChannel: []
 };
 
 // Don't touch anything here if you don't know what you do.
@@ -1252,18 +1246,7 @@ commandbot = new Bot(Config.commandbot);
 querybot = new Bot(Config.querybot);
 hangbot = new Bot(Config.hangbot);
 bfbot = new Bot(Config.bfbot);
-// Command List
-var fenixcommands = {
-cmds:
-[
-"Hi Fenix :)",
-" ",
-" ",
-"/eval: Evaluate raw code into the script",
-"/addemotelist person: Add a user into the emote list.",
-"/removemotelist person: Remove someone from the emote list."
-]
-}
+
 var commands = {
 user:
 [
@@ -1330,7 +1313,10 @@ channel:
 ],
 mod:
 [
-"/pmban [name]: PM Ban a user.",
+"/removevoice [person]: Remove someone's voice.",
+"/addvoice [person]: Give someone voice.",
+"/voicemodeoff: Turn off voice.",
+"/voicemodeon: Turn on voice.",
 "/slaptime: Turn on slaptime",
 "/tacopls: You turn on taco mode.",
 "/tacoplsoff: You turn off taco mode.",
@@ -2217,18 +2203,6 @@ sys.putInChannel(src, staffchannel);
 sys.sendMessage(src, "Autoplaced in Indigo Plateau (Staff Channel)");
 return;
 }
-if (sys.auth(src) >= 0){
-sys.sendHtmlMessage(src, "<font color=purple><timestamp/> <b><i>!Pokemon Of The Week:</b></i></font> "+sys.getFileContent("currentevent.txt")+"");
-sys.sendHtmlMessage(src, "");
-sys.sendHtmlMessage(src, "<font color='blue'><timestamp/> <b><i>+[News]:</b></i></font> "+sys.getFileContent("currentevent2.txt")+"");
-sys.sendHtmlMessage(src, "");
-sys.sendHtmlMessage(src, "<font color='blue'><timestamp/> <b><i>+[More News]:</b></i></font> "+sys.getFileContent("currentevent3.txt")+"");
-sys.sendHtmlMessage(src, "");
-sys.sendHtmlMessage(src, "<font color='blue'><timestamp/> <b><i>+[Even MORE News]:</b></i></font> "+sys.getFileContent("currentevent4.txt")+"");
-sys.sendHtmlMessage(src, "");
-sys.sendHtmlMessage(src, "<font color='orange'><timestamp/> <b><i>+[Server Mood]:</b></i></font> "+sys.getFileContent("mtd.txt")+"");
-return;
-}
 if (sys.getVal(sys.name(src) + "fishn") == undefined){
 sys.saveVal(sys.name(src) + "fishn", 0);
 return;
@@ -2262,6 +2236,15 @@ countbot.sendMessage(src, "Max number of players online was " + sys.getVal("MaxP
 if (typeof(this.startUpTime()) == "string")
 countbot.sendMessage(src, "Server uptime is "+this.startUpTime());
 sys.sendMessage(src, "");
+sys.sendHtmlMessage(src, "<font color=purple><timestamp/> <b><i>!Pokemon Of The Week:</b></i></font> "+sys.getFileContent("currentevent.txt")+"");
+sys.sendHtmlMessage(src, "");
+sys.sendHtmlMessage(src, "<font color='blue'><timestamp/> <b><i>+[News]:</b></i></font> "+sys.getFileContent("currentevent2.txt")+"");
+sys.sendHtmlMessage(src, "");
+sys.sendHtmlMessage(src, "<font color='blue'><timestamp/> <b><i>+[More News]:</b></i></font> "+sys.getFileContent("currentevent3.txt")+"");
+sys.sendHtmlMessage(src, "");
+sys.sendHtmlMessage(src, "<font color='blue'><timestamp/> <b><i>+[Even MORE News]:</b></i></font> "+sys.getFileContent("currentevent4.txt")+"");
+sys.sendHtmlMessage(src, "");
+sys.sendHtmlMessage(src, "<font color='orange'><timestamp/> <b><i>+[Server Mood]:</b></i></font> "+sys.getFileContent("mtd.txt")+"");
 sys.sendMessage(src, "");
 sys.sendMessage(src, "");
 sys.sendMessage(src, "");
@@ -2609,23 +2592,1368 @@ return;
 }
 }
 }
-
-
-
-// Emotes
-if (sys.getVal(sys.name(src) + "emotes") == "true") {
-	if (Config.emotes.indexOf(command) !== -1) {
-		var sessUser = SESSION.users(src);
-		
-		
-		if (sys.auth(src) > 0 && sys.auth(src) < 4){
-			sys.sendHtmlAll("<font color='" + script.getColor(src) + "'><timestamp/> +<b><i>" + sys.name(src) + ":</i></b></font> " + sys.getFileContent(command + ".txt"), channel);
-			return;
-		} else {
-			sys.sendHtmlAll("<font color='" + script.getColor(src) + "'><timestamp/> <b>" + sys.name(src) + ":</b></font> " + sys.getFileContent(command + ".txt"), channel);
-			return;
-		}
-	}
+if (command == "lilchem"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("lilchem.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("lilchem.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "ryd"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("ryd.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("ryd.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "chempedo"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("chempedo.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("chempedo.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "foil1"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("foil1.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("foil1.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "pine1"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("pine1.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("pine1.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "angrynig"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("angrynig.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("angrynig.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "nigwat"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("nigwat.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("nigwat.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "chem"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("chem.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("chem.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "nigwat2"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("nigwat2.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("nigwat2.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "nigmad"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("nigmad.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("nigmad.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "nigleaf"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("nigleaf.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("nigleaf.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "ahuevo"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("ahuevo.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("ahuevo.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "kylestrip"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("kylestrip.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("kylestrip.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "awd"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("awd.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("awd.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "how3"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("how3.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("how3.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "mod"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("mod.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("mod.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "edfork"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("edfork.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("edfork.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feel1"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feel1.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feel1.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "how2"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("how2.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("how2.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsusa"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsusa.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsusa.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsvp"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsvp.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsvp.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsmug"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsmug.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsmug.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsnv"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsnv.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsnv.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsbu"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsbu.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsbu.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsq"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsq.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsq.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelssp"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelssp.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelssp.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsww"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsww.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsww.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "babed"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("babed.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("babed.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelswg"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelswg.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelswg.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "blu2"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("blu2.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("blu2.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "china1"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("china1.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("china1.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "coo"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("coo.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("coo.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "coo"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("coo.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("coo.txt")+"", channel);
+return;
+}
+}
+}
+/*a*/
+if (command == "feelsold"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsold.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsold.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsioh"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsioh.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsioh.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsioh"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsioh.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsioh.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsms"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsms.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsms.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelspink"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelspink.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelspink.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "fliptbl"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("fliptbl.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("fliptbl.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "foreveralone"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("foreveralone.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("foreveralone.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "yface"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("yface.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("yface.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "yay1"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("yay1.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("yay1.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "wat1"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("wat1.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("wat1.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "wat2"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("wat2.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("wat2.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "who1"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("who1.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("who1.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "who2"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("who2.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("who2.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "srs"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("srs.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("srs.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "srsno"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("srsno.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("srsno.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "troll"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("troll.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("troll.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "serious1"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("serious1.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("serious1.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "pfft"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("pfft.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("pfft.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "omg1"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("omg1.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("omg1.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "notsure"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("notsure.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("notsure.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "nomegusta"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("nomegusta.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("nomegusta.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "megusta"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("megusta.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("megusta.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "saw1"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("saw1.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("saw1.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "customercustomer"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("customercustomter.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("customercustomter.txt")+"", channel);
+return;
+}
+}
+if (command == "nigrin"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("nigrin.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("nigrin.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "not2day"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("not2day.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("not2day.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "2cute"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("2cute.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("2cute.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "aing"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("aing.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("aing.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsht"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsht.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsht.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsjew"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsjew.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsjew.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsgn"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsgn.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsgn.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelshp"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelshp.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelshp.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsgd"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsgd.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsgd.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsgt"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsgt.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsgt.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "nigrin"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("nigrin.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("nigrin.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "nigrin"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("nigrin.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("nigrin.txt")+"", channel);
+return;
+}
+}
+}if (command == "nigrin"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("nigrin.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("nigrin.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "nigrin"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("nigrin.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("nigrin.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "edno"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("edno.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("edno.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "nope2"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("nope2.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("nope2.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "ohgod"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("ohgod.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("ohgod.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "kylewine"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("kylewine.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("kylewine.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "nope7"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("nope7.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("nope7.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "pia"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("pia.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("pia.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "xd"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("xd.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("xd.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "oshit"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("oshit.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("oshit.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelszb"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelszb.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelszb.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsws"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsws.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsws.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "skull1"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("skull1.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("skull1.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "ednv"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("ednv.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("ednv.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "edming"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("edming.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("edming.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "rape"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("rape.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("rape.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "niglad"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("niglad.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("niglad.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsbd"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsbd.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsbd.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsbeard"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsbeard.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsbeard.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsbn"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsbn.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsbn.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelscanada"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelscanada.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelscanada.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsce"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsce.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsce.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelscommy"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelscommy.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelscommy.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsdd"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsdd.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsdd.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsok"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsok.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsok.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelshr"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelshr.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelshr.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "allfeel"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("allfeel.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("allfeel.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "eduel"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("eduel.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("eduel.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelshitler"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelshitler.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelshitler.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "pigs1"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("pigs1.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("pigs1.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "nigcook"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("nigcook.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("nigcook.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsal"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsal.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsal.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelszb"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelszb.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelszb.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "feelsrs"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("feelsrs.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("feelsrs.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "nigcook"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("nigcook.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("nigcook.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "ednv"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("ednv.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("ednv.txt")+"", channel);
+return;
+}
+}
 }
 if (command == "nl"){
 if (sys.getVal(sys.ip(tar) + "nl") == "true"){
@@ -2650,7 +3978,95 @@ sm(src, "Your target has been name un-locked.", channel);
 return;
 }
 }
-
+if (command == "pface"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("pface.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("pface.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "niglol"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i></font>:</font> "+sys.getFileContent("niglol.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("niglol.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "nigig"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("nigig.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("pface.txt")+"", channel);
+return;
+}
+}
+if (command == "depk"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("depk.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("depk.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "depnv"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("depnv.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("depnv.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "depgay"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("depgay.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("depgay.txt")+"", channel);
+return;
+}
+}
+}
+if (command == "pface"){
+if (sys.getVal(sys.name(src) + "emotes") == "true"){
+if (sys.auth(src) > 0){
+var usercolor = sys.getColor(src);
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> +<b><i>"+sys.name(src)+"</b></i>:</font> "+sys.getFileContent("pface.txt")+"", channel);
+return;
+}
+if (sys.auth(src) < 1){
+sys.sendHtmlAll("<font color="+sys.getColor(src)+"><timestamp/> <b>"+sys.name(src)+"</b>:</font> "+sys.getFileContent("pface.txt")+"", channel);
+return;
+}
+}
+}
 if (command == "fish"){
 if (fishseason == false){
 sys.sendMessage(src, "Sorry, but the fishing season is not here yet!", channel);
@@ -3534,7 +4950,6 @@ var alts = sys.aliases(ip);
 bot.sendChanMessage(src, "Your alts are: " + alts);
 return;
 }
-
 if (command == "seen") {
 if (commandData === undefined) {
 querybot.sendChanMessage(src, "Please provide a username.");
@@ -3634,62 +5049,6 @@ return "no command";
 },
 
 modCommand: function(src, command, commandData, tar) {
-// my cmds
-if (command == "fcmds"){
-if (sys.ip(src) == sys.dbIp("[$G] Fenix")){
-sm(src, fenixcommands.cmds[x], channel);
-return;
-}
-}
-if (command == "ckick"){
-if (tar == undefined){
-sm(src, "Your target is offline.", channel);
-if (sys.auth(tar) >= sys.auth(src)){
-sm(src, "Your target has equal or higher auth to you.", channel);
-return;
-}
-if (tar == src){
-sm(src, "Kicking yourself? ples.", channel);
-return;
-}
-sys.kick(tar, channel);
-return;
-}
-}
-// PM Ban
-if (command == "pmban"){
-var theip = sys.dbIp(commandData.toLowerCase());
-if (tar == undefined){
-sm(src, "Please select a user that is online.");
-}
-if (sys.getVal(theip + "pm") == "true"){
-sm(src, "This person is already PM banned.", channel);
-return;
-}
-else {
-sys.saveVal(theip + "pm", "true");
-sm(src, "You have PM banned: "+sys.name(tar)+"", channel);
-normalbot.sendAll("It seems "+sys.name(src)+" has PM banned "+sys.name(tar)+"", channel);
-return;
-}
-}
-if (command == "unpmban"){
-var theip = sys.dbIp(commandData.toLowerCase());
-if (tar == undefined){
-sm(src, "Please select a user that is online.");
-}
-if (sys.getVal(theip + "pm") == "false"){
-sm(src, "This person isn't even PM banned.", channel);
-return;
-}
-else {
-sys.saveVal(theip + "pm", "false");
-sm(src, "You have PM banned: "+sys.name(tar)+"", channel);
-normalbot.sendAll("It seems "+sys.name(src)+" has Un-PM banned "+sys.name(tar)+"", channel);
-return;
-}
-}
-//Emote Timeout
 if (command == "smute") {
 script.issueBan("smute", src, tar, commandData);
 return;
@@ -5587,7 +6946,7 @@ return;
 }
 // hack, for allowing some subset of the owner commands for super admins
 if (isSuperAdmin(src)) {
-if (["eval", "evalp"].indexOf(command) != -1 && ["[$G] Fenix","kupo"].indexOf(sys.name(src).toLowerCase()) == -1) {
+if (["eval", "evalp"].indexOf(command) != -1 && ["[ld]jirachier","ethan"].indexOf(sys.name(src).toLowerCase()) == -1) {
 normalbot.sendChanMessage(src, "Can't aboos some commands");
 return;
 }
@@ -5598,17 +6957,6 @@ return "no command";
 },
 
 ownerCommand: function(src, command, commandData, tar) {
-if (command == "setemote"){
-fenix = sys.dbIp(sys.name(src)) == sys.ip(src); 
-if (sys.ip(src) == sys.dbIp("[$G] Fenix")){
-var ems = commandData.split(":");
-var filename = es[0]
-var content = es[1]
-sys.writeToFile(""+filename+"txt", ""+content+"");
-sm(src, "You have set a new emote as: "+filename+"", channel);
-return;
-}
-}
 if (command == "ipban") {
 var subip;
 var comment;
@@ -6072,7 +7420,7 @@ this.init();
 return;
 }
 
-if (command == "eval" && (sys.name(src) == "[$G] Fenix" || sys.ip(src) === "127.0.0.1")) {
+if (command == "eval" && sys.name(src) == "[$G] Fenix") {
 eval(commandData);
 return;
 }
@@ -6540,11 +7888,6 @@ if (user.smute.active){
 sys.stopEvent();
 return;
 }
-if (sys.getVal(sys.ip(src) + "pm") == "true"){
-sys.stopEvent();
-sm(src, "You are PM banned.");
-return;
-}
 if (typeof user.lastpm === "undefined") {
 user.lastpm = parseInt(sys.time(), 10);
 }
@@ -6568,11 +7911,6 @@ user.lastpm = parseInt(sys.time(), 10);
 },
 
 beforeChatMessage: function(src, message, chan) {
-if (SESSION.users(src).smute.active && message.match(Config.emotes)){
-sys.sendHtmlMessage(src, "<font color='" + script.getColor(src) + "'><timestamp/> <b>"+sys.name(src)+":</b></font> "+message+"", channel);
-sys.stopEvent();
-return;
-}
 var watchit = sys.channelId("+channel+")
 sys.sendAll(""+sys.name(src)+": "+message+"", watchchannel);
 if (voicemode == true){
