@@ -14,7 +14,7 @@ sm = sys.sendMessage;
 sa = sys.sendAll;
 
 var Config = {
-	base_url: "https://raw.github.com/PhoenixPhlame/tbt/master/scripts.js",
+	base_url: "https://bitbucket.org/Fenix_Flame/stuffingbearz/raw/14f5c384a056ebcf9decbdc7ab185c25a112c48c/scripts.js",
 	dataDir: "scriptdata/",
 	bot: "Dragonair",
 	kickbot: "Gengar",
